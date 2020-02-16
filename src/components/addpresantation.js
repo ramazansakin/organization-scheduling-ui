@@ -25,7 +25,7 @@ export default class addpresantation extends Component {
             time: this.state.time
         }
         // Call addEventToOrganization service via axios and map to model if exists
-        axios.post(`https://localhost:8085/organizations/1/addevent`, newPresantation)
+        axios.post(`https://localhost:8085/organizations/1/addevent`, { newPresantation })
 
             .then(res => {
                 console.log(res);
