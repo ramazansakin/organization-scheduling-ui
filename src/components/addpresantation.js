@@ -18,17 +18,13 @@ export default class addpresantation extends Component {
     addNewPresantation = (e) => {
         e.preventDefault();
 
-        // api tarafındaki model içerisinde  oğelerin adı ve tipleri birebir buradaki gibi olmalı 
+        // event model fields - presentation
         const newPresantation = {
             subject: this.state.subject,
             duration: this.state.duration,
             time: this.state.time
         }
-        //rest servise objeyi gönderiyorum. yazdığın rest servis  nerede çalışıyorsa artık abi 
-        //onun yolunu veriyorsun.
-        //spring için nasıl olur bilemiyorum abi  , ben böyle kullanıyordum .nette.
-        //ama .nete özel birşey değil  benim bildiğim
-        //axiosun spring örnekleri de var abi 
+        // Call addEventToOrganization service via axios and map to model if exists
         axios.post(`https://localhost:8085/organizations/1/addevent`, newPresantation)
             .then(res => {
                 console.log(res);

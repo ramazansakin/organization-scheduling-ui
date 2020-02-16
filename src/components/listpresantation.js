@@ -13,8 +13,8 @@ export default class listpresantation extends Component {
             { headerName: "Presantation Subject", field: "subject" },
             { headerName: "Presantation Duration", field: "duration" }
         ],
-        //abi burasını örnek data olsun diuye bıraktım
-        //yukarıda columları tanımladık. fieldlarını ve ekranda görünecek column adlarını felan
+        
+        //Sample static test data
         rowData: [
             { subject: "Toyota", time: "9:00 AM", duration: "45 minutes" },
             { subject: "Ford", time: "9:45 AM", duration: "60 minutes" },
@@ -24,13 +24,12 @@ export default class listpresantation extends Component {
     }
     getList = (e) => {
 
-        //servisten çektiğin data içerisindeki fiedl alanları ile gridin column definitiondaki field alanlarının
-        //isimleri birebir aynı olmalı
+        // Call organization schedule service and get response model to map ui
         axios.get(`https://localhost:8085/organizations/schedule/1`)  //yine kendi metodun yolunu veriyorsun
             .then(res => {
-                //data geldi ise 
+                // If data is correct, map to model
                 this.setState({
-                    rowData: res.data // res.data içerisinde servisten gelen data olduğunu varsayıyorum
+                    rowData: res.data
                 });
             });
     }
