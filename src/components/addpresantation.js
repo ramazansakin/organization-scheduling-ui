@@ -4,8 +4,12 @@ import axios from 'axios'
 export default class addpresantation extends Component {
     state = {
         subject: '',
+<<<<<<< HEAD
         duration: '',
         time: ''
+=======
+        pduration: ''
+>>>>>>> a02ed82162c688e273b4f06fed97a8deb67b1881
     }
     onchange = (e) => {
         this.setState({
@@ -18,6 +22,7 @@ export default class addpresantation extends Component {
     addNewPresantation = (e) => {
         e.preventDefault();
 
+<<<<<<< HEAD
         // event model fields - presentation
         const newPresantation = {
             subject: this.state.subject,
@@ -26,6 +31,20 @@ export default class addpresantation extends Component {
         }
         // Call addEventToOrganization service via axios and map to model if exists
         axios.post(`https://localhost:8085/organizations/1/addevent`, newPresantation)
+=======
+        // api tarafındaki model içerisinde  oğelerin adı ve tipleri birebir buradaki gibi olmalı 
+        const newPresantation = {
+            name: this.state.name,
+            subject: this.state.subject,
+            pdate: this.state.pduration
+        }
+        //rest servise objeyi gönderiyorum. yazdığın rest servis  nerede çalışıyorsa artık abi 
+        //onun yolunu veriyorsun.
+        //spring için nasıl olur bilemiyorum abi  , ben böyle kullanıyordum .nette.
+        //ama .nete özel birşey değil  benim bildiğim
+        //axiosun spring örnekleri de var abi 
+        axios.post(`https://localhost:8085/organizations/1/addevent`, { newPresantation })
+>>>>>>> a02ed82162c688e273b4f06fed97a8deb67b1881
             .then(res => {
                 console.log(res);
                 console.log(res.data);
