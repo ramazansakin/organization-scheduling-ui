@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AddPresantation from './components/addpresantation'
+import ListPresantation from './components/listpresantation'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="card" style={{ marginTop: "5px" }}>
+        <div className="card-body">
+          <div className="card-header">
+            <h5 className="card-title">Organization Scheduling Project</h5>
+          </div>
+          <div>
+            <p className="card-text">You can add presantation or list presantation</p>
+          </div>
+
+          <div className="row">
+            <div className="col-md-4">
+              <AddPresantation />
+            </div>
+            <div className="col-md-8">
+              <ListPresantation />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
