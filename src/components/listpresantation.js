@@ -39,14 +39,14 @@ export default class listpresantation extends Component {
         return (
 
             <div className="container">
-                <div className="card" style={{ width: "32rem" }}>
+                <div className="card" style={{ width: "38rem" }}>
 
                     <div className="card-header">
                         <h5 className="card-title">Conference Program</h5>
                     </div>
                     <button type="submit" onClick={this.getList} className="btn btn-success btn-block">Get List</button>
                     <div className="card-body">
-                        <div className="ag-theme-balham" style={{ height: "400px", width: "30rem" }}>
+                        <div className="ag-theme-balham" style={{ height: "400px", width: "36rem" }}>
                             <AgGridReact
                                 columnDefs={this.state.columnDefs}
                                 rowData={this.state.rowData}>

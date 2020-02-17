@@ -57,8 +57,8 @@ export default class addpresantation extends Component {
                                 <label htmlFor="pduration">Presantation Duration</label>
                                 <input
                                     type="text"
-                                    name="pduration"
-                                    id="pduration"
+                                    name="duration"
+                                    id="duration"
                                     placeholder="Presantation Duration"
                                     className="form-control"
                                     onChange={this.onchange}
