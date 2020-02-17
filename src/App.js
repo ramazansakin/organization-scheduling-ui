@@ -14,10 +14,10 @@ function App() {
           </div>
 
           <div className="row" style={{ marginTop: "15px" }}>
-            <div className="col-md-4">
+            <div className="col-lg-4">
               <AddPresantation />
             </div>
-            <div className="col-md-8" >
+            <div className="col-lg-8" >
               <ListPresantation />
             </div>
           </div>

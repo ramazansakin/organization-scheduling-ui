@@ -4,8 +4,8 @@ import axios from 'axios'
 export default class addpresantation extends Component {
     state = {
         subject: '',
-        duration: '',
-        time: ''
+        time: '',
+        duration: ''
     }
     onchange = (e) => {
         this.setState({
@@ -21,13 +21,13 @@ export default class addpresantation extends Component {
         // event model fields - presentation
         const newPresantation = {
             subject: this.state.subject,
-            duration: this.state.duration,
-            time: this.state.time
+            time: this.state.time,
+            duration: this.state.duration
         }
         // Call addEventToOrganization service via axios and map to model if exists
         // 1 is the default organization/conference , this is why hard-coded, 
         // But backend side is written as generic
-        axios.post(`https://localhost:8085/organizations/1/addevent`, { newPresantation })
+        axios.post(`http://localhost:8085/organizations/1/addevent`,  newPresantation )
 
             .then(res => {
                 console.log(res);
