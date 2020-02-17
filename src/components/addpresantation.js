@@ -25,8 +25,9 @@ export default class addpresantation extends Component {
             time: this.state.time
         }
         // Call addEventToOrganization service via axios and map to model if exists
-        // https://localhost:8085/organizations/1/addevent
-        axios.post(``, { newPresantation })
+        // 1 is the default organization/conference , this is why hard-coded, 
+        // But backend side is written as generic
+        axios.post(`https://localhost:8085/organizations/1/addevent`, { newPresantation })
 
             .then(res => {
                 console.log(res);

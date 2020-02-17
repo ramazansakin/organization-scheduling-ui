@@ -25,7 +25,7 @@ export default class listpresantation extends Component {
     getList = (e) => {
 
         // Call organization schedule service and get response model to map ui
-        axios.get(`https://cors-anywhere.herokuapp.com/http://localhost:8085/events`)  
+        axios.get(`http://localhost:8085/organizations/schedule/1`)
             .then(res => {
                 // If data is correct, map to model
                 this.setState({
