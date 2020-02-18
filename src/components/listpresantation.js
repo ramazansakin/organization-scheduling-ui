@@ -12,7 +12,8 @@ export default class listpresantation extends Component {
             { headerName: "Time", field: "time", width: 100 },
             { headerName: "Presantation Subject", field: "subject", width: 320 },
             { headerName: "Presantation Duration", field: "duration", width: 120 },
-            { headerName: "Track No", field: "trackno", width: 80, rowGroup: true } // Group by track No
+            { headerName: "Track No", field: "trackno", width: 80 } 
+            // rowGroup: true -> be able to group by track No on enterprise only 
         ],
 
         //Sample static test data
